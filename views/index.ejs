@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <style>
+        #container {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: rgba(241, 227, 211, 0.438); 
+        }
+        h3 {
+            margin: 2px;
+        }
+        input {
+            margin: 3px;
+        }
+        textarea {
+            width: 295px;
+            height: 100px;
+        }
+        h4 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id ="container">
+        <h3>Welcome to Quoting Dojo</h3>
+        <h4><%= messages.registration %></h4>
+        <form action="/quote" method="POST">
+            Your Name: <input type="text" name="name"><br>
+            Your Quote: <textarea type="text" name="quote"></textarea><br>
+            <input type="submit" value="Add my quote">
+        </form>
+        <a href="/skip"><button>Skip to quotes</button></a>
+    </div>
+</body>
+</html>

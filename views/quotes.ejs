@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quoting Dojo</title>
+    <style>
+    #container {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: rgba(241, 227, 211, 0.438); 
+    }
+    h3 {
+        margin: 5px;
+    }
+    h3#center {
+        text-align: center;
+    }
+    h3#left {
+        margin: 0 0 0 30px;
+    }
+    button {
+        margin: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h3 id="center">Here are the awesome quotes!</h3>
+        <% for (x in quotes) { %>
+            <h3>"<%= quotes[x].quote%>"</h3>
+            <h3 id="left">- <%= quotes[x].name%> at <%=quotes[x].createdAt%></h3>
+        <% } %>
+        <a href="/another"><button>Add another quote</button></a>
+    </div>
+</body>
+</html>
